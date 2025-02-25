@@ -12,31 +12,67 @@
             box-sizing: border-box;
             background-color: #f4f4f4;
             color: #333;
+            text-align: center;
         }
         nav {
-            background: #007bff;
-            color: #fff;
+            background: #fff;
+            color: #333;
             padding: 15px;
-            text-align: center;
+            text-align: right;
             position: fixed;
             width: 100%;
             top: 0;
             left: 0;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
         }
         nav a {
-            color: #fff;
+            color: #333;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
         }
-        section {
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,ai') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+        }
+        .section {
             padding: 60px;
-            margin-top: 50px;
+        }
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+            max-width: 300px;
             text-align: center;
         }
-        .cv, .projets {
-            background: #e3e3e3;
-            padding: 50px 20px;
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
         }
     </style>
 </head>
@@ -47,23 +83,32 @@
         <a href="#projets">Projets</a>
     </nav>
     
-    <section id="accueil">
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Je suis un Data Analyst passionné par la data science et le Big Data.</p>
-    </section>
+    <header class="hero">
+        <h1>Bienvenue sur mon Portfolio !</h1>
+        <p>Découvrez mes projets en Data Science et Intelligence Artificielle.</p>
+    </header>
     
-    <section id="cv" class="cv">
+    <section id="cv" class="section">
         <h2>Mon CV</h2>
         <p>Téléchargez mon CV ici : <a href="cv.pdf" target="_blank">📄 Voir mon CV</a></p>
     </section>
     
-    <section id="projets" class="projets">
+    <section id="projets" class="section">
         <h2>Mes Projets</h2>
-        <ul>
-            <li><a href="#">Projet 1 - Analyse de données</a></li>
-            <li><a href="#">Projet 2 - Machine Learning</a></li>
-            <li><a href="#">Projet 3 - Big Data</a></li>
-        </ul>
+        <div class="projects">
+            <div class="project-card">
+                <img src="https://source.unsplash.com/300x200/?data" alt="Projet 1">
+                <h3>Préparer des données et analyse exploratoire</h3>
+            </div>
+            <div class="project-card">
+                <img src="https://source.unsplash.com/300x200/?ai" alt="Projet 2">
+                <h3>Prédire la consommation et les émissions</h3>
+            </div>
+            <div class="project-card">
+                <img src="https://source.unsplash.com/300x200/?tech" alt="Projet 3">
+                <h3>Segmenter les clients d'un site e-commerce</h3>
+            </div>
+        </div>
     </section>
 </body>
 </html>
