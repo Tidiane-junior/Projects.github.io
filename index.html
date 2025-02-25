@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Mon Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: black;
+        }
+        header {
+            background: url('header-image.jpg') no-repeat center center/cover;
             color: black;
             text-align: center;
+            padding: 50px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0px 4px 2px -2px gray;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
         }
         .projects {
             display: grid;
@@ -17,33 +41,38 @@
             padding: 20px;
         }
         .project {
-            padding: 20px;
             background-size: cover;
             background-position: center;
-            color: white;
+            padding: 50px;
+            color: black;
+            text-align: center;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 200px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
         }
-        .project:nth-child(1) { background-image: url('education.jpg'); }
-        .project:nth-child(2) { background-image: url('health.jpg'); }
-        .project:nth-child(3) { background-image: url('buildings.jpg'); }
-        .project:nth-child(4) { background-image: url('ecommerce.jpg'); }
-        .project:nth-child(5) { background-image: url('scoring.jpg'); }
-        .project:nth-child(6) { background-image: url('dashboard.jpg'); }
-        .project:nth-child(7) { background-image: url('bigdata.jpg'); }
-        .project:nth-child(8) { background-image: url('ai_project.jpg'); }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon Portfolio</h1>
-    <div class="projects">
-        <div class="project">Analysez des données de systèmes éducatifs</div>
-        <div class="project">Préparez des données pour un organisme de santé publique</div>
-        <div class="project">Anticipez les besoins en consommation de bâtiments</div>
-        <div class="project">Segmentez des clients d'un site e-commerce</div>
-        <div class="project">Implémentez un modèle de scoring</div>
-        <div class="project">Réalisez un dashboard et assurez une veille technique</div>
-        <div class="project">Réalisez un traitement dans un environnement Big Data sur le Cloud</div>
-        <div class="project">Réalisez le cadrage d’un projet IA</div>
-    </div>
+    <header>
+        <h1>Bienvenue sur mon portfolio</h1>
+    </header>
+    <nav>
+        <a href="#cv">Mon CV</a>
+        <a href="#projets">Projets</a>
+    </nav>
+    <section id="projets" class="projects">
+        <div class="project" style="background-image: url('education.jpg');">Analysez des données de systèmes éducatifs</div>
+        <div class="project" style="background-image: url('sante.jpg');">Préparez des données pour un organisme de santé publique</div>
+        <div class="project" style="background-image: url('batiments.jpg');">Anticipez les besoins en consommation de bâtiments</div>
+        <div class="project" style="background-image: url('ecommerce.jpg');">Segmentez des clients d'un site e-commerce</div>
+        <div class="project" style="background-image: url('scoring.jpg');">Implémentez un modèle de scoring</div>
+        <div class="project" style="background-image: url('dashboard.jpg');">Réalisez un dashboard et assurez une veille technique</div>
+        <div class="project" style="background-image: url('bigdata.jpg');">Réalisez un traitement dans un environnement Big Data sur le Cloud</div>
+        <div class="project" style="background-image: url('ia.jpg');">Réalisez le cadrage d’un projet IA</div>
+    </section>
 </body>
 </html>
