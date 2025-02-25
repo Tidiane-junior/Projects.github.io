@@ -5,12 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #007bff; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        nav {
+            background: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            padding: 60px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .cv, .projets {
+            background: #e3e3e3;
+            padding: 50px 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Bienvenue sur mon portfolio !</h1>
-    <p>Je suis un Data Analyst passionné par la data science et le Big Data.</p>
+    <nav>
+        <a href="#accueil">Accueil</a>
+        <a href="#cv">Mon CV</a>
+        <a href="#projets">Projets</a>
+    </nav>
+    
+    <section id="accueil">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <p>Je suis un Data Analyst passionné par la data science et le Big Data.</p>
+    </section>
+    
+    <section id="cv" class="cv">
+        <h2>Mon CV</h2>
+        <p>Téléchargez mon CV ici : <a href="cv.pdf" target="_blank">📄 Voir mon CV</a></p>
+    </section>
+    
+    <section id="projets" class="projets">
+        <h2>Mes Projets</h2>
+        <ul>
+            <li><a href="#">Projet 1 - Analyse de données</a></li>
+            <li><a href="#">Projet 2 - Machine Learning</a></li>
+            <li><a href="#">Projet 3 - Big Data</a></li>
+        </ul>
+    </section>
 </body>
 </html>
